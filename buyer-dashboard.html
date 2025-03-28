@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome, <span id="buyer-name"></span></h1>
+    </header>
+    <p>This is your Buyer Dashboard. Browse fresh farm produce here!</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const userName = localStorage.getItem("userName");
+            document.getElementById("buyer-name").innerText = userName ? userName : "Buyer";
+        });
+    </script>
+</body>
+</html>
