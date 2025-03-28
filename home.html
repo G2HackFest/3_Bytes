@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshHarvest Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FreshHarvest Marketplace</h1>
+            <p>Welcome, <span id="user-name">Guest</span>!</p>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#market">Buy Fresh Produce</a></li>
+                    <li><a href="#sell">Sell Your Harvest</a></li>
+                    <li><a href="#contact">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>From the Farm to Your Table</h2>
+            <p>Support local farmers while enjoying the freshest produce.</p>
+            <img src="images/gabriella-clare-marino-pD0tUqzSCY4-unsplash.jpg" width="500px" alt="Farm to Table">
+            <button onclick="scrollToSection('market')">Shop Now</button>
+            <button onclick="scrollToSection('sell')">Start Selling</button>
+        </div>
+    </section>
+
+    <section id="market">
+        <div class="container">
+            <h2>Handpicked Goodness</h2>
+            <img src="images/tim-mossholder-ZHfFvW2u93U-unsplash.jpg" width="500px" alt="Fresh Produce">
+            <div id="produce-list" class="produce-grid"></div>
+        </div>
+    </section>
+
+    <section id="sell">
+        <div class="container">
+            <h2>Maximize Your Profits</h2>
+            <img src="images/radja-fizzaska-9QKYZKAnzo4-unsplash.jpg" width="500px" alt="Farmers Market">
+            <form id="sell-form">
+                <input type="text" id="produce-name" placeholder="What are you selling?" required>
+                <input type="number" id="produce-price" placeholder="Set Your Price (per kg)" required>
+                <button type="submit">List Your Produce</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <img src="images/mael-balland-Ft-PrGvzXZ4-unsplash.jpg" width="500px" alt="Support">
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="How can we help?" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreshHarvest Marketplace. Supporting farmers, delighting customers.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("user-name").innerText = localStorage.getItem("userName") || "Guest";
+    </script>
+</body>
+</html>
