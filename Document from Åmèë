@@ -1,0 +1,44 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("user-details-form");
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Get user input
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const userType = document.getElementById("user-type").value; // Select Buyer/Seller
+
+            // Validate input fields
+            if (!name || !email || !phone) {
+                alert("Please fill in all the details before proceeding.");
+                return;
+            }
+
+            // Save user details in local storage for later use
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userType", userType);
+
+            // Redirect user dynamically
+            if (userType === "buyer") {
+                window.location.href = "buyer-dashboard.html";
+            } else if (userType === "seller") {
+                window.location.href = "seller-dashboard.html";
+            } else {
+                alert("Please select a valid user type.");
+            }
+        });
+    }
+
+    // Show user details on the dashboard
+    const userName = localStorage.getItem("userName");
+    const userType = localStorage.getItem("userType");
+
+    if (document.getElementById("welcome-message")) {
+        document.getElementById("welcome-message").innerText = userName
+            ? `Welcome, ${userName}!`
+            : "Welcome!";
+    }
+});
