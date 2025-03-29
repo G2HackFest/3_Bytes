@@ -3,76 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshHarvest Marketplace</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Farmer's Marketplace - Welcome</title>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>FreshHarvest Marketplace</h1>
-            <p>Your gateway to fresh, organic, and locally sourced farm produce!</p>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#market">Buy Fresh Produce</a></li>
-                    <li><a href="#sell">Sell Your Harvest</a></li>
-                    <li><a href="#contact">Get in Touch</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>From the Farm to Your Table</h2>
-            <p>Support local farmers while enjoying the freshest and healthiest produce at unbeatable prices.</p>
-            <button onclick="scrollToSection('market')">Shop Now</button>
-            <button onclick="scrollToSection('sell')">Start Selling</button>
-        </div>
-    </section>
-
-    <section id="market">
-        <div class="container">
-            <h2>Handpicked Goodness, Just for You</h2>
-            <p>Browse through a variety of farm-fresh vegetables, fruits, dairy, and more. No middlemen, no artificial preservatives, just nature’s best.</p>
-            <div id="produce-list" class="produce-grid"></div>
-        </div>
-    </section>
-
-    <section id="sell">
-        <div class="container">
-            <h2>Maximize Your Profits with Direct Sales</h2>
-            <p>Join a network of thriving farmers who sell directly to customers. Get fair pricing, instant deals, and grow your farming business.</p>
-            <form id="sell-form">
-                <input type="text" id="produce-name" placeholder="What are you selling? (e.g., Organic Tomatoes)" required>
-                <input type="number" id="produce-price" placeholder="Set Your Price (per kg)" required>
-                <input type="number" id="produce-quantity" placeholder="Available Quantity (kg)" required>
-                <input type="text" id="farmer-name" placeholder="Your Name" required>
-                <input type="tel" id="farmer-contact" placeholder="Your Contact Number" required>
-                <button type="submit">List Your Produce</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Have questions or need assistance? We’re here to help you grow and buy smarter.</p>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Tell us how we can help you!" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 FreshHarvest Marketplace. Supporting farmers, delighting customers.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<body class="intro-page">
+    <div class="intro-container">
+        <h1>Welcome to Farmer's Marketplace</h1>
+        <p>Connecting Farmers & Buyers Directly</p>
+        <button onclick="window.location.href='user-details.html'">Get Started</button>
+    </div>
 </body>
 </html>

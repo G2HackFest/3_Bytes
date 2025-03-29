@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>FreshHarvest - Seller Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
     <header>
-        <h1>Welcome, <span id="seller-name"></span></h1>
+        <h1>Welcome, <span id="seller-name"></span>!</h1>
+        <p>List your fresh farm produce for buyers.</p>
     </header>
-    <p>This is your Seller Dashboard. List and manage your produce here!</p>
+
+    <section class="sell-form">
+        <h2>List Your Produce</h2>
+        <form>
+            <label for="produce">Product Name</label>
+            <input type="text" id="produce" placeholder="Enter product name" required>
+
+            <label for="price">Price (₹ per kg)</label>
+            <input type="number" id="price" placeholder="Enter price" required>
+
+            <label for="quantity">Available Quantity (kg)</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" required>
+
+            <button type="submit">Add Listing</button>
+        </form>
+    </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const userName = localStorage.getItem("userName");
-            document.getElementById("seller-name").innerText = userName ? userName : "Seller";
-        });
+        document.getElementById('seller-name').innerText = localStorage.getItem('userName') || 'Seller';
     </script>
 </body>
 </html>

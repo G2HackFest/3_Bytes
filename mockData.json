@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Organic Tomatoes",
+        "category": "Vegetables",
+        "price": 50,
+        "quantity": 20,
+        "farmer": "Rajesh Kumar"
+    },
+    {
+        "id": 2,
+        "name": "Fresh Mangoes",
+        "category": "Fruits",
+        "price": 120,
+        "quantity": 30,
+        "farmer": "Sunita Sharma"
+    },
+    {
+        "id": 3,
+        "name": "Pure Cow Milk",
+        "category": "Dairy",
+        "price": 60,
+        "quantity": 15,
+        "farmer": "Amit Patel"
+    }
+]

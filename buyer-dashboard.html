@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>FreshHarvest - Buyer Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
     <header>
-        <h1>Welcome, <span id="buyer-name"></span></h1>
+        <h1>Welcome, <span id="buyer-name"></span>!</h1>
+        <p>Browse fresh farm produce directly from farmers.</p>
     </header>
-    <p>This is your Buyer Dashboard. Browse fresh farm produce here!</p>
+    
+
+    <section class="product-list">
+        <h2>Available Products</h2>
+        <div class="product">
+            <h3>Organic Tomatoes</h3>
+            <p>Price: ₹40/kg</p>
+            <p>Seller: Ramesh Kumar</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="product">
+            <h3>Fresh Mangoes</h3>
+            <p>Price: ₹80/kg</p>
+            <p>Seller: Anjali Farms</p>
+            <button>Buy Now</button>
+        </div>
+    </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const userName = localStorage.getItem("userName");
-            document.getElementById("buyer-name").innerText = userName ? userName : "Buyer";
-        });
+        document.getElementById('buyer-name').innerText = localStorage.getItem('userName') || 'Buyer';
     </script>
 </body>
 </html>
